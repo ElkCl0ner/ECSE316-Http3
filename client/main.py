@@ -1,8 +1,8 @@
 import struct
 import random
+import socket
 
-def main():
-    
+def buildRequest():
     ### QUIC HEADER ###
 
     # Generate Connection ID
@@ -22,6 +22,24 @@ def main():
     packet += struct.pack('', quic_version)
     packet += struct.pack('', packet_number)
 
+    ### FRAME 1 - STREAM: GET REQUEST ###
+
+
+    ### Frame 2 - STREAM: GET REQUEST ###
+
+
+def main():
+    
+    # Build request
+    request = buildRequest()
+
+    # Send request
+
+    # Receive response
+
+        # Send ACK
+
+        # Terminate connection (if all data received)
+
 if __name__ == "__main__":
     main()
-
